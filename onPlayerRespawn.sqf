@@ -1,0 +1,1 @@
+[player, "BLUFOR_LOADOUT", "jip"] call TMF_assigngear_fnc_assigngear;

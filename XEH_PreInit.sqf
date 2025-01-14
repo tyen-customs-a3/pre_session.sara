@@ -1,0 +1,2 @@
+//Mission Settings
+enableMedicalHelpNotification = true;

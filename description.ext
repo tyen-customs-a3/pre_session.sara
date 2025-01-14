@@ -1,0 +1,99 @@
+tmf_version[] = {1,1,1}; // DO NOT CHANGE THIS. This is the core version of the template that your mission was started with.
+cba_settings_hasSettingsFile = 1; //Will crash on dedicated server if no setting file are present in mission.
+enableDebugConsole = 1; // Allows the logged in admin to use the debug console from the escape page.
+enableTargetDebug = 1;
+respawnButton = 1;
+debriefing = 0;
+
+class CfgDebriefing
+{
+	class Success
+	{
+		title = "Mission Success";
+		subtitle = "";
+		description = "";
+	};
+	class Failed
+	{
+		title = "Mission Failed";
+		subtitle = "";
+		description = "";
+	};
+};
+
+class CfgFunctions
+{
+	class opec
+	{
+		class opec
+		{
+			class garageNew {};
+		};
+	};
+	class bear
+	{
+		class session_warmup
+		{
+			file = "functions";
+			class welcomeMessage {};
+		};
+	};
+	#include "bear_mapTeleport\CfgFunctions.hpp"
+};
+
+#include "loadouts\_macros.hpp"
+#include "ui_defines.hpp"
+	
+class RscTitles 
+{
+	class Default 
+	{
+		idd = -1;
+		fadein = 0;
+		fadeout = 0;
+		duration = 0;
+	};
+	
+	#include "welcomeMessage.hpp"
+};
+
+class CfgLoadouts
+{
+	class BLUFOR_LOADOUT
+	{
+		displayName = "BLUFOR Loadout";
+		#include "loadouts\blufor_loadout.hpp"
+	};
+};
+
+class Extended_PreInit_EventHandlers 
+{
+	class pca_preInit 
+	{
+		init = "[] call compile preprocessFileLineNumbers 'XEH_PreInit.sqf'";
+	};
+};
+
+class Extended_PostInit_EventHandlers 
+{
+	class pca_postInit 
+	{
+		init = "[] call compile preprocessFileLineNumbers 'XEH_PostInit.sqf'";
+	};
+};
+
+class Extended_DisplayLoad_EventHandlers 
+{
+	class RscCustomInfoMiniMap 
+	{
+		presession_players = "((_this select 0) displayCtrl 101) ctrlAddEventHandler ['draw', {_this call F_fnc_drawGroupMarkers}];";
+	};
+	class RscDiary 
+	{
+		presession_players = "((_this select 0) displayCtrl 51) ctrlAddEventHandler ['draw', {_this call F_fnc_drawGroupMarkers}];";
+	};
+	class RscDisplayCurator 
+	{
+		presession_players = "((_this select 0) displayCtrl 50) ctrlAddEventHandler ['draw', {_this call F_fnc_drawGroupMarkers}];";
+	};
+};

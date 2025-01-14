@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project name="Session Warmup">
+	<Package name="Welcome Message">
+		<Container name="Welcome">
+			<Key ID="str_bear_greeting">
+				<Original>Welcome!</Original>
+				<English>Welcome!</English>
+				<Czech>Ahoj!</Czech>
+				<French>Salut!</French>
+				<German>Hallo!</German>
+				<Italian>Salve!</Italian>
+				<Polish>Bywaj!</Polish>
+				<Portuguese>Olá!</Portuguese>
+				<Russian>Добро пожаловат!</Russian>
+				<Spanish>¡Hola!</Spanish>
+				<Korean>Welcome!</Korean>
+				<Japanese>Welcome!</Japanese>
+			</Key>
+		</Container>
+	</Package>
+</Project>
