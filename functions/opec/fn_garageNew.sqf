@@ -41,15 +41,16 @@ _freeSpaceFound = false;
 
 // Check each marker for free space
 {
-    private _pos = getMarkerPos _x;
-    private _nearbyVehicles = nearestObjects [_pos, ["AllVehicles"], 20] select {!(_x isKindOf "CAManBase")};
-    private _isClaimed = (missionNamespace getVariable "garage_claimed_markers") getOrDefault [_x, false];
-    
-    if ((count _nearbyVehicles) == 0 && !_isClaimed) exitWith {
-        (missionNamespace getVariable "garage_claimed_markers") set [_x, true];
-        uiNamespace setVariable ["current_garage", _x];
-        _freeSpaceFound = true;
-    };
+	private _pos = getMarkerPos _x;
+	private _nearbyVehicles = nearestObjects [_pos, ["AllVehicles"], 20] select {!(_x isKindOf "CAManBase")};
+	private _nearbyPlayers = (_pos nearEntities [["CAManBase"], 10]) select {alive _x && isPlayer _x};
+	private _isClaimed = (missionNamespace getVariable "garage_claimed_markers") getOrDefault [_x, false];
+	
+	if ((count _nearbyVehicles) == 0 && (count _nearbyPlayers) == 0 && !_isClaimed) exitWith {
+		(missionNamespace getVariable "garage_claimed_markers") set [_x, true];
+		uiNamespace setVariable ["current_garage", _x];
+		_freeSpaceFound = true;
+	};
 } forEach _markerArray;
 
 // If no free space is found, prompt the user to clear a space
