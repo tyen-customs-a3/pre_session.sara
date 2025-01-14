@@ -123,7 +123,7 @@ with uiNamespace do {
 			true,
 			true,
 			"",
-			"true",
+			 "vehicle _this == _this", // Only show if player is not in any vehicle
 			100  // Distance parameter
 		];
 
@@ -150,7 +150,7 @@ with uiNamespace do {
 					true,
 					true,
 					"",
-					"true",
+					 "vehicle _this == _this", // Only allow confirmation if player is not in any vehicle
 					50
 				];
 				
@@ -169,25 +169,43 @@ with uiNamespace do {
 			true,
 			true,
 			"",
-			"true",
+			 "vehicle _this == _this", // Only show if player is not in any vehicle
 			50  // Distance parameter
 		];
 
+		// Shared function for vehicle deletion
+		private _fnc_deleteVehicle = {
+			params ["_veh"];
+			if (isNull _veh) exitWith {};
+			
+			// Eject and delete crew
+			{
+			_x action ["Eject", vehicle _x];
+			if (!isPlayer _x) then { deleteVehicle _x };
+			} forEach (crew _veh);
+			
+			// Delete the vehicle
+			deleteVehicle _veh;
+		};
+
+		// Add killed event handler
 		_new_veh addEventHandler ["Killed", {
 			params ["_veh"];
 			_veh spawn {
-				sleep 10;
-				deleteVehicle _this;
+			sleep 10;
+			if (!isNull _this && {!alive _this}) then {
+				[_this] call _fnc_deleteVehicle;
+			};
 			};
 		}];
 
 		// Add one-time inactivity check
-		[_new_veh, getPos _new_veh] spawn {
-			params ["_vehicle", "_spawnPos"];
+		[_new_veh, getPos _new_veh, _fnc_deleteVehicle] spawn {
+			params ["_vehicle", "_spawnPos", "_deleteFunc"];
 			sleep 60;
-			if (alive _vehicle && {(_spawnPos distance (getPos _vehicle)) < 2}) then {
-				deleteVehicle _vehicle;
-				hint "Vehicle deleted due to inactivity at spawn point.";
+			if (!isNull _vehicle && {alive _vehicle} && {(_spawnPos distance (getPos _vehicle)) < 2}) then {
+			[_vehicle] call _deleteFunc;
+			hint "Vehicle deleted due to inactivity at spawn point.";
 			};
 		};
 	};
