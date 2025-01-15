@@ -213,7 +213,14 @@ with uiNamespace do {
 			{
 				params ["_target", "_caller"];
 				
-				// Add confirmation action that will auto-remove after 10 seconds
+				// Check if confirmation action already exists
+				if (_target getVariable ["deleteConfirmPending", false]) exitWith {
+					hint "Delete confirmation already pending.";
+				};
+				
+				// Mark that confirmation is pending
+				_target setVariable ["deleteConfirmPending", true, true];
+				
 				hint "Confirm vehicle deletion by pressing the Delete Confirmation action within 10 seconds.";
 				private _confirmID = _target addAction [
 					"<t color='#ff0000'>Delete Confirmation</t>",
@@ -227,21 +234,23 @@ with uiNamespace do {
 						deleteVehicle _target;
 					},
 					nil,
-					20,  // Higher priority than other actions
+					20,
 					true,
 					true,
 					"",
-					 "vehicle _this == _this", // Only allow confirmation if player is not in any vehicle
+					"vehicle _this == _this",
 					50
 				];
 				
-				// Remove confirmation action after 10 seconds
 				[_target, _confirmID] spawn {
 					params ["_veh", "_actionId"];
 					sleep 10;
-					_veh removeAction _actionId;
-					if (alive _veh) then {
-						hint "Vehicle deletion cancelled.";
+					if (!isNull _veh) then {
+						_veh removeAction _actionId;
+						_veh setVariable ["deleteConfirmPending", false, true];
+						if (alive _veh) then {
+							hint "Vehicle deletion cancelled.";
+						};
 					};
 				};
 			},
@@ -250,8 +259,8 @@ with uiNamespace do {
 			true,
 			true,
 			"",
-			 "vehicle _this == _this", // Only show if player is not in any vehicle
-			50  // Distance parameter
+			"vehicle _this == _this",
+			50
 		];
 
 		// Shared function for vehicle deletion
