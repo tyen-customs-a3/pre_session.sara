@@ -9749,6 +9749,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
+						init="this setFlagTexture ""images\buydlc_co.paa""";
 					};
 					id=283;
 					type="Flag_Blueking_F";
@@ -10264,7 +10265,6 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="this addAction [""<t color='#FFFF00'>Virtual Garage</t>"", {[[""vehrequest_marker_1"", ""vehrequest_marker_2"", ""vehrequest_marker_3"", ""vehrequest_marker_4"", ""vehrequest_marker_5""], true, [""Car"",""Tank"",""Helicopter"",""Plane"",""StaticWeapon""]] call opec_fnc_garageNew }];";
 				name="vehrequest_1_point";
 				disableSimulation=1;
 			};
@@ -10301,6 +10301,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				disableSimulation=1;
 			};
 			id=292;
 			type="Desk";
@@ -10756,12 +10757,12 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="this addAction [""<t color='#FFFF00'>Virtual Garage</t>"", {[[""boatrequest_marker_1"",""boatrequest_marker_2""], true] call opec_fnc_garageNew }];";
 				name="boatrequest_1_point";
 				disableSimulation=1;
 			};
 			id=312;
 			type="Computer";
+			atlOffset=7.1525574e-05;
 			class CustomAttributes
 			{
 				class Attribute0
