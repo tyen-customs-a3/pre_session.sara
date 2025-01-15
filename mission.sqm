@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=5;
+		nextID=7;
 	};
 	class Camera
 	{
-		pos[]={8140.2969,48.303406,9623.5205};
-		dir[]={0.2324395,-0.51777422,0.82334077};
-		up[]={0.14067581,0.85551918,0.49829805};
-		aside[]={0.96238869,-1.4260877e-07,-0.27169451};
+		pos[]={9527.2119,143.66685,9952.5156};
+		dir[]={0.2324387,-0.51777178,0.82333755};
+		up[]={0.14067511,0.85551876,0.49829525};
+		aside[]={0.96238399,-7.4505806e-09,-0.27169329};
 	};
 };
 binarizationWanted=0;
@@ -415,7 +415,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=112;
+		items=110;
 		class Item0
 		{
 			dataType="Group";
@@ -509,7 +509,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -621,7 +621,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -733,7 +733,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -845,7 +845,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -957,7 +957,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -1069,7 +1069,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -1105,7 +1105,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 					class Value
 					{
 						class data
@@ -1224,7 +1224,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -1336,7 +1336,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -1448,7 +1448,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -1560,7 +1560,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -1672,7 +1672,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -1784,7 +1784,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -1820,7 +1820,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 					class Value
 					{
 						class data
@@ -1939,7 +1939,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -2051,7 +2051,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -2163,7 +2163,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -2275,7 +2275,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -2387,7 +2387,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -2499,7 +2499,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -2535,7 +2535,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 					class Value
 					{
 						class data
@@ -2654,7 +2654,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -2766,7 +2766,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -2878,7 +2878,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -2990,7 +2990,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -3102,7 +3102,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -3214,7 +3214,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -3250,7 +3250,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 					class Value
 					{
 						class data
@@ -3369,7 +3369,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -3481,7 +3481,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -3593,7 +3593,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -3705,7 +3705,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -3817,7 +3817,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -3929,7 +3929,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -3965,7 +3965,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 					class Value
 					{
 						class data
@@ -4084,7 +4084,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -4196,7 +4196,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -4308,7 +4308,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -4420,7 +4420,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -4532,7 +4532,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -4644,7 +4644,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -4680,7 +4680,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 					class Value
 					{
 						class data
@@ -4799,7 +4799,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -4911,7 +4911,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -5023,7 +5023,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -5135,7 +5135,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -5247,7 +5247,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -5359,7 +5359,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -5395,7 +5395,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 					class Value
 					{
 						class data
@@ -5514,7 +5514,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -5626,7 +5626,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -5738,7 +5738,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -5850,7 +5850,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -5962,7 +5962,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -6074,7 +6074,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -6110,7 +6110,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 					class Value
 					{
 						class data
@@ -6229,7 +6229,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -6341,7 +6341,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -6453,7 +6453,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -6565,7 +6565,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -6677,7 +6677,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -6789,7 +6789,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -6825,7 +6825,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 					class Value
 					{
 						class data
@@ -7977,7 +7977,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -8089,7 +8089,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -8201,7 +8201,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -8313,7 +8313,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -8425,7 +8425,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -8537,7 +8537,7 @@ class Mission
 						class Attribute5
 						{
 							property="TMF_assignGear_full";
-							expression="[_this,_value] call tmf_assignGear_fnc_helper;";
+							expression="[_this,  _value] call TMF_assignGear_fnc_helper";
 							class Value
 							{
 								class data
@@ -8573,7 +8573,7 @@ class Mission
 				class Attribute0
 				{
 					property="groupID";
-					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };                        ";
 					class Value
 					{
 						class data
@@ -9737,98 +9737,8 @@ class Mission
 			name="airfield";
 			class Entities
 			{
-				items=9;
+				items=7;
 				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={9528,140.603,9956};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-						name="box5";
-					};
-					id=157;
-					type="Land_PaperBox_open_full_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="TMF_SpecialistMarker";
-							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="["""",""""]";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="ace_isMedicalFacility";
-							expression="_this setVariable [""ace_medical_isMedicalFacility"", _value, true];";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="ace_arsenal_attribute";
-							expression="if (!is3DEN) then {[_this, +_value] call ace_arsenal_fnc_attributeInit}";
-							class Value
-							{
-								class data
-								{
-									singleType="ARRAY";
-									class value
-									{
-										items=2;
-										class Item0
-										{
-											class data
-											{
-												singleType="ARRAY";
-											};
-										};
-										class Item1
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=0;
-											};
-										};
-									};
-								};
-							};
-						};
-						nAttributes=4;
-					};
-				};
-				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
@@ -9886,7 +9796,7 @@ class Mission
 						nAttributes=3;
 					};
 				};
-				class Item2
+				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
@@ -9957,7 +9867,7 @@ class Mission
 						nAttributes=4;
 					};
 				};
-				class Item3
+				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
@@ -10028,7 +9938,7 @@ class Mission
 						nAttributes=4;
 					};
 				};
-				class Item4
+				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
@@ -10100,7 +10010,7 @@ class Mission
 						nAttributes=4;
 					};
 				};
-				class Item5
+				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
@@ -10190,7 +10100,7 @@ class Mission
 						nAttributes=4;
 					};
 				};
-				class Item6
+				class Item5
 				{
 					dataType="Object";
 					class PositionInfo
@@ -10280,97 +10190,7 @@ class Mission
 						nAttributes=4;
 					};
 				};
-				class Item7
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={9528,140.603,9958};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-						name="box8";
-					};
-					id=301;
-					type="Land_PaperBox_open_full_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="allowDamage";
-							expression="_this allowdamage _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="TMF_SpecialistMarker";
-							expression="_this setVariable ['TMF_SpecialistMarker',_value,true];";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="["""",""""]";
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="ace_isMedicalFacility";
-							expression="_this setVariable [""ace_medical_isMedicalFacility"", _value, true];";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=0;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="ace_arsenal_attribute";
-							expression="if (!is3DEN) then {[_this, +_value] call ace_arsenal_fnc_attributeInit}";
-							class Value
-							{
-								class data
-								{
-									singleType="ARRAY";
-									class value
-									{
-										items=2;
-										class Item0
-										{
-											class data
-											{
-												singleType="ARRAY";
-											};
-										};
-										class Item1
-										{
-											class data
-											{
-												singleType="SCALAR";
-												value=0;
-											};
-										};
-									};
-								};
-							};
-						};
-						nAttributes=4;
-					};
-				};
-				class Item8
+				class Item6
 				{
 					dataType="Object";
 					class PositionInfo
@@ -10437,20 +10257,20 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9526.0977,141.01445,9955.4766};
-				angles[]={0,4.1887903,0};
+				position[]={9527.9336,140.99745,9955.7275};
+				angles[]={6.2762561,4.5378561,0.0065624379};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="this addAction [""<t color='#FFFF00'>Virtual Garage</t>"", {[[""vehrequest_marker_1"", ""vehrequest_marker_2"", ""vehrequest_marker_3"", ""vehrequest_marker_4"", ""vehrequest_marker_5""], true, true] call opec_fnc_garageNew }];";
+				init="this addAction [""<t color='#FFFF00'>Virtual Garage</t>"", {[[""vehrequest_marker_1"", ""vehrequest_marker_2"", ""vehrequest_marker_3"", ""vehrequest_marker_4"", ""vehrequest_marker_5""], true, [""Car"",""Tank"",""Helicopter"",""Plane"",""StaticWeapon""]] call opec_fnc_garageNew }];";
 				name="vehrequest_1_point";
 				disableSimulation=1;
 			};
 			id=289;
 			type="Computer";
-			atlOffset=0.017059326;
+			atlOffset=9.1552734e-05;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10474,8 +10294,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9526.1445,140.40205,9955.5273};
-				angles[]={0,2.8797932,0};
+				position[]={9528.0117,140.40205,9955.752};
+				angles[]={-0,3.1415927,0};
 			};
 			side="Empty";
 			flags=4;
@@ -10516,75 +10336,6 @@ class Mission
 			};
 		};
 		class Item96
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={9530.0811,140.40205,9955.6328};
-				angles[]={0,3.4033921,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=293;
-			type="Desk";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item97
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={9530.0313,141.01543,9955.6064};
-				angles[]={0,4.712389,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				init="this addAction [""<t color='#FFFF00'>Virtual Garage</t>"", {[[""vehrequest_marker_1"", ""vehrequest_marker_2"", ""vehrequest_marker_3"", ""vehrequest_marker_4"", ""vehrequest_marker_5""], true, true] call opec_fnc_garageNew }];";
-				name="vehrequest_2_point";
-			};
-			id=294;
-			type="Computer";
-			atlOffset=0.017913818;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item98
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10644,7 +10395,7 @@ class Mission
 				nAttributes=3;
 			};
 		};
-		class Item99
+		class Item97
 		{
 			dataType="Marker";
 			position[]={9566,139.99512,9984};
@@ -10670,7 +10421,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item100
+		class Item98
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10730,7 +10481,7 @@ class Mission
 				nAttributes=3;
 			};
 		};
-		class Item101
+		class Item99
 		{
 			dataType="Marker";
 			position[]={9450,139.99512,9984};
@@ -10756,7 +10507,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item102
+		class Item100
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10816,7 +10567,7 @@ class Mission
 				nAttributes=3;
 			};
 		};
-		class Item103
+		class Item101
 		{
 			dataType="Marker";
 			position[]={9600,139.99512,9984};
@@ -10842,13 +10593,13 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item104
+		class Item102
 		{
 			dataType="Object";
 			class PositionInfo
 			{
 				position[]={7993.5,172.95181,7758};
-				angles[]={0,4.7123895,-0};
+				angles[]={0,4.7123895,0};
 			};
 			side="Empty";
 			flags=4;
@@ -10901,13 +10652,13 @@ class Mission
 				nAttributes=3;
 			};
 		};
-		class Item105
+		class Item103
 		{
 			dataType="Object";
 			class PositionInfo
 			{
 				position[]={7993.5,172.95181,7765};
-				angles[]={0,4.7123895,-0};
+				angles[]={0,4.7123895,0};
 			};
 			side="Empty";
 			flags=4;
@@ -10960,13 +10711,13 @@ class Mission
 				nAttributes=3;
 			};
 		};
-		class Item106
+		class Item104
 		{
 			dataType="Object";
 			class PositionInfo
 			{
 				position[]={7702.104,195.17734,7484.2178};
-				angles[]={0,5.4977884,-0};
+				angles[]={0,5.4977884,0};
 			};
 			side="Empty";
 			flags=4;
@@ -10977,7 +10728,7 @@ class Mission
 			type="Land_Laptop_02_unfolded_F";
 			atlOffset=0.026290894;
 		};
-		class Item107
+		class Item105
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10993,13 +10744,13 @@ class Mission
 			type="Land_Laptop_02_unfolded_F";
 			atlOffset=4.0249939;
 		};
-		class Item108
+		class Item106
 		{
 			dataType="Object";
 			class PositionInfo
 			{
 				position[]={8193.8906,5.7436619,9673.8213};
-				angles[]={0,4.7123899,-0};
+				angles[]={0,4.7123899,0};
 			};
 			side="Empty";
 			flags=4;
@@ -11029,7 +10780,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item109
+		class Item107
 		{
 			dataType="Object";
 			class PositionInfo
@@ -11088,7 +10839,7 @@ class Mission
 				nAttributes=3;
 			};
 		};
-		class Item110
+		class Item108
 		{
 			dataType="Marker";
 			position[]={8149.2998,0.59299999,9712.3779};
@@ -11115,7 +10866,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item111
+		class Item109
 		{
 			dataType="Marker";
 			position[]={8171.3125,2.1402302,9764.6182};

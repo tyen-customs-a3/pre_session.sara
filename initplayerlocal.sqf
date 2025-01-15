@@ -2,6 +2,8 @@
 	INIT PLAYER LOCAL
 	- Executed locally when player joins a mission (include mission start).
 */
+params ["_player", "_didJIP"];
+
 {
     _x addAction [
 		"<t size='2' font='RobotoCondensedBold'>ACE Arsenal</t>", 
@@ -13,7 +15,35 @@
 		{0 = ["Open", true] spawn BIS_fnc_arsenal;}, 
 		0, 102, true, false
 	];
-} forEach [box1, box2, box3, box4, box5, box6, box7, box8, box9, box10];
+} forEach [box1, box2, box3, box4, box6, box7, box9, box10];
+
+// Add garage action to specific objects
+{
+    _x addAction [
+        "<t size='2'>Virtual Garage</t>",
+        {
+            [
+                ["vehrequest_marker_1", "vehrequest_marker_2", "vehrequest_marker_3", "vehrequest_marker_4", "vehrequest_marker_5"],
+                true,
+                ["Car","Tank","Helicopter","Plane"]
+            ] call opec_fnc_garageNew
+        }
+    ];
+} forEach [vehrequest_1_point];
+
+// Add garage action to specific objects
+{
+    _x addAction [
+        "<t size='2'>Virtual Garage</t>",
+        {
+            [
+                ["vehrequest_marker_1", "vehrequest_marker_2", "vehrequest_marker_3", "vehrequest_marker_4", "vehrequest_marker_5"],
+                true,
+                ["Boat"]
+            ] call opec_fnc_garageNew
+        }
+    ];
+} forEach [boatrequest_1_point];
 
 bear_mapTeleport_eh_map = addMissionEventHandler ["Map", {_this call bear_mapTeleport_fnc_handler;}];
 [
